@@ -1,0 +1,44 @@
+{
+  "name": "nist-weierstrauss",
+  "version": "0.0.1",
+  "description":"Utilities for NIST Weierstrauss ECC curves for the Ceramic did:key method resolver",
+  "keywords": [
+    "ceramic",
+    "nist",
+    "weierstrauss"
+  ],
+  "author": "Brent Shambaugh <brent.shambaugh@gmail.com>",
+  "license": "(Apache-2.0 OR MIT)",
+  "directories": {
+    "lib": "./lib"
+  },
+  "main": "./lib/index.js",
+  "source": "src/index.ts",
+  "types": "./lib/index.d.ts",
+  "type": "module",
+  "exports": {
+    ".": "./lib/index.js"
+  },
+  "files": [
+    "lib",
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bshambaugh/nist-weierstrauss.git"
+  },
+  "sideEffects": false,
+  "scripts": {
+    "test": "NODE_OPTIONS=--experimental-vm-modules npx jest --silent --coverage --forceExit",
+    "build": "npx tsc --project tsconfig.json",
+    "prepublishOnly": "npm run build",
+    "prebuild": "npm run clean",
+    "lint": "npx eslint ./src --ext .js,.jsx,.ts,.tsx",
+    "clean": "npx rimraf ./lib"
+  },
+  "dependencies": {
+    "multiformats": "^9.5.2",
+    "uint8arrays": "^3.0.0",
+    "bigint-mod-arith": "^3.1.0"
+  }
+}
