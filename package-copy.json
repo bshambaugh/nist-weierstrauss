@@ -29,8 +29,12 @@
   },
   "sideEffects": false,
   "scripts": {
-    "test": "npx lerna exec npm t",
-    "build": "npx lerna run build"
+    "test": "NODE_OPTIONS=--experimental-vm-modules npx jest --silent --coverage --forceExit",
+    "build": "npx tsc --project tsconfig.json",
+    "prepublishOnly": "npm run build",
+    "prebuild": "npm run clean",
+    "lint": "npx eslint ./src --ext .js,.jsx,.ts,.tsx",
+    "clean": "npx rimraf ./lib"
   },
   "dependencies": {
     "@babel/plugin-proposal-decorators": "^7.18.10",

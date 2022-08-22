@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1660927148460" clover="3.2.0">
-  <project timestamp="1660927148460" name="All files">
+<coverage generated="1660958351110" clover="3.2.0">
+  <project timestamp="1660958351111" name="All files">
     <metrics statements="86" coveredstatements="86" conditionals="50" coveredconditionals="50" methods="10" coveredmethods="10" elements="146" coveredelements="146" complexity="0" loc="86" ncloc="86" packages="1" files="4" classes="4"/>
     <file name="nist-weierstrass-common.ts" path="/home/ubuntu/Downloads/nov22nd/nist-weierstrass/src/nist-weierstrass-common.ts">
       <metrics statements="44" coveredstatements="44" conditionals="38" coveredconditionals="38" methods="7" coveredmethods="7"/>
