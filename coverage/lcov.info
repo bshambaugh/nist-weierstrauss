@@ -1,5 +1,5 @@
 TN:
-SF:src/nist-weierstrass-common.ts
+SF:src/nist-weierstrauss-common.ts
 FN:38,pubKeyBytesToHex
 FN:52,publicKeyToXY
 FN:68,publicKeyHexToUint8ArrayPointPair

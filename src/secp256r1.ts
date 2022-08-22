@@ -1,7 +1,7 @@
 import * as u8a from 'uint8arrays'
 import * as bigintModArith from 'bigint-mod-arith'
-import * as nist_weierstrass_common from './nist-weierstrass-common.js'
-import { BigIntPoint } from './nist-weierstrass-common'
+import * as nist_weierstrauss_common from './nist-weierstrauss-common.js'
+import { BigIntPoint } from './nist-weierstrauss-common'
 
 /**
  * Decompress a compressed public key in SEC format.
@@ -13,7 +13,7 @@ import { BigIntPoint } from './nist-weierstrass-common'
  * @throws TypeError: input cannot be null or undefined.
  */
  export function ECPointDecompress( comp : Uint8Array ) : BigIntPoint {
-  if(!nist_weierstrass_common.testUint8Array(comp)) {
+  if(!nist_weierstrauss_common.testUint8Array(comp)) {
     throw new TypeError('input must be a Uint8Array');
    }
   // two, prime, b, and pIdent are constants for the P-256 curve
