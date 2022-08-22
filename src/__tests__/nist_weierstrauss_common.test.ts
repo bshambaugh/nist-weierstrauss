@@ -8,7 +8,7 @@ test('test a hex string with unexpected input', () => {
 });
 
 test('test a hex string with unexpected input : try 2', () => {
-   const inputPublicKeyHex = 99;
+   const inputPublicKeyHex: any = 99;
    const publicKey_u8a = mapper.testHexString(inputPublicKeyHex);
    expect(publicKey_u8a).toEqual(false);
 });
@@ -26,13 +26,13 @@ test('test testUint8Array with correct input', () => {
 });
 
 test('test testUint8Array with number', () => {
-   const inputCompressedPoint = 5;
+   const inputCompressedPoint: any = 5;
    const publicKey_u8a = mapper.testUint8Array(inputCompressedPoint);
    expect(publicKey_u8a).toEqual(false);
 });
 
 test('test testUint8Array with number', () => {
-   const inputCompressedPoint = 'donkey';
+   const inputCompressedPoint: any = 'donkey';
    const publicKey_u8a = mapper.testUint8Array(inputCompressedPoint);
    expect(publicKey_u8a).toEqual(false);
 });
@@ -45,19 +45,22 @@ test('expect pubKeyBytesToHex to throw an error for null', () => {
 
 test('expect pubKeyBytesToHex to throw an error for undefined', () => {
       expect(() => {
-      mapper.pubKeyBytesToHex();
+      const num: any = undefined;
+      mapper.pubKeyBytesToHex(num);
       }).toThrowError('input must be a Uint8Array');
 });
 
 test('expect pubKeyBytesToHex to throw an error for an unexpected integer', () => {
       expect(() => {
-      mapper.pubKeyBytesToHex(5);
+      const num: any = 5;
+      mapper.pubKeyBytesToHex(num);
       }).toThrowError('input must be a Uint8Array');
 });
 
 test('expect pubKeyBytesToHex to throw an error for an unexpected object', () => {
       expect(() => {
-      mapper.pubKeyBytesToHex({x: 6n, y: 5n});
+      const object: any = {x: 6n, y: 5n};
+      mapper.pubKeyBytesToHex(object);
       }).toThrowError('input must be a Uint8Array');
 });
 
@@ -77,7 +80,8 @@ test('expect pubKeyBytesToHex to convert byte array to hex string', () => {
 
 test('expect publicKeyIntToXY to throw an error for incorrect type', () => {
       expect(() => {
-      mapper.publicKeyIntToXY(5);
+      const num: any = 5;
+      mapper.publicKeyIntToXY(num);
       }).toThrowError('Input must be an object with properties x and y');
 });
 
@@ -89,34 +93,39 @@ test('expect publicKeyIntToXY to throw an error for {x: null, y: null}', () => {
 
 test('expect publicKeyIntToXY to throw an error for {x: undefined, y: undefined}', () => {
       expect(() => {
-      mapper.publicKeyIntToXY();
+      const object: any = {x: undefined, y: undefined};
+      mapper.publicKeyIntToXY(object);
       }).toThrow();
 });
 
 
 test('expect publicKeyHextToUint8ArrayPointPair to throw an error for {x: undefined, y: undefined}', () => {
       expect(() => {
-      mapper.publicKeyHexToUint8ArrayPointPair();
+      const object: any = {x: undefined, y: undefined};
+      mapper.publicKeyHexToUint8ArrayPointPair(object);
       }).toThrowError('input must be string with characters 0-9,A-F,a-f');
 });
 
 
 test('expect publicKeyHexToUint8ArrayPointPair to throw an error for incorrect type', () => {
       expect(() => {
-      mapper.publicKeyHexToUint8ArrayPointPair(5);
+      const num: any = 5;
+      mapper.publicKeyHexToUint8ArrayPointPair(num);
       }).toThrowError('input must be string with characters 0-9,A-F,a-f');
 });
 
 
 test('expect publicKeyHexToUint8ArrayPointPair to throw an error for {x: null, y: null}', () => {
       expect(() => {
-      mapper.publicKeyHexToUint8ArrayPointPair({x: null, y: null});
+      const object: any = {x: null, y: null};
+      mapper.publicKeyHexToUint8ArrayPointPair(object);
       }).toThrowError('input must be string with characters 0-9,A-F,a-f');
 });
 
 test('expect publicKeyHexToUint8ArrayPointPair to throw an error for {x: undefined, y: undefined}', () => {
       expect(() => {
-      mapper.publicKeyHexToUint8ArrayPointPair({x: undefined, y: undefined});
+      const object: any = {x: undefined, y: undefined};
+      mapper.publicKeyHexToUint8ArrayPointPair(object);
       }).toThrowError('input must be string with characters 0-9,A-F,a-f');
 });
 
@@ -134,13 +143,15 @@ test('expect publicKeyToXY to throw an error for null', () => {
 
 test('expect publicKeyToXY to throw an error for undefined', () => {
       expect(() => {
-      mapper.publicKeyToXY();
+      const num: any = undefined;
+      mapper.publicKeyToXY(num);
       }).toThrowError('input must be string with characters 0-9,A-F,a-f');
 });
 
 test('expect publicKeyToXY to throw an error for a non string', () => {
       expect(() => {
-      mapper.publicKeyToXY(5);
+      const num: any = 5;
+      mapper.publicKeyToXY(num);
       }).toThrowError('input must be string with characters 0-9,A-F,a-f');
 });
 
@@ -198,7 +209,8 @@ test('convert raw public key as a hex string into an x,y point with x and y base
 
 test('expect publicKeyIntToXY to throw an error for incorrect type', () => {
       expect(() => {
-      mapper.publicKeyIntToXY(5);
+      const num: any = 5;
+      mapper.publicKeyIntToXY(num);
       }).toThrowError('Input must be an object with properties x and y');
 });
 
@@ -210,25 +222,29 @@ test('expect publicKeyIntToXY to throw an error for {x: null, y: null}', () => {
 
 test('expect publicKeyIntToXY to have properties x and y', () => {
       expect(() => {
-      mapper.publicKeyIntToXY({x: 5n, z: 8n});
+      const object: any = {x: 5n, z: 8n};
+      mapper.publicKeyIntToXY(object);
       }).toThrowError('Input must have properties x and y');
 });
 
 test('expect publicKeyIntToXY to throw an error for {x: undefined, y: undefined}', () => {
       expect(() => {
-      mapper.publicKeyIntToXY();
+      const object: any = {x: undefined, y: undefined};
+      mapper.publicKeyIntToXY(object);
       }).toThrowError('input cannot be null or undefined.');
 });
 
 test('expect publicKeyIntToUint8ArrayPointPair to throw an error for {x: undefined, y: undefined}', () => {
       expect(() => {
-      mapper.publicKeyHexToUint8ArrayPointPair();
+      const object: any = {x: undefined, y: undefined};
+      mapper.publicKeyHexToUint8ArrayPointPair(object);
       }).toThrowError('input must be string with characters 0-9,A-F,a-f');
 });
 
 test('expect publicKeyIntToUint8ArrayPointPair to throw an error for {x: 5, y: 9}', () => {
       expect(() => {
-      mapper.publicKeyIntToUint8ArrayPointPair({x: 5,y: 9});
+      const object: any = {x: 5,y: 9};
+      mapper.publicKeyIntToUint8ArrayPointPair(object);
       }).toThrowError('Input coordinates must be BigInt');
 });
 
@@ -240,13 +256,15 @@ test('expect publicKeyIntToUint8ArrayPointPair to throw an error for null', () =
 
 test('expect publicKeyIntToUint8ArrayPointPair to throw an error for mislabled coordinate properties', () => {
       expect(() => {
-      mapper.publicKeyIntToUint8ArrayPointPair({x: 5n, z: 7n});
+      const object: any = {x: 5n, z: 7n};
+      mapper.publicKeyIntToUint8ArrayPointPair(object);
       }).toThrowError('Input must have properties x and y');
 });
 
 test('expect publicKeyIntToUint8ArrayPointPair to throw an error for a non object', () => {
       expect(() => {
-      mapper.publicKeyIntToUint8ArrayPointPair(6);
+      const num: any = 6;
+      mapper.publicKeyIntToUint8ArrayPointPair(num);
       }).toThrowError('Input must be an object with properties x and y');
 });
 

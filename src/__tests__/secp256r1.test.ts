@@ -3,7 +3,8 @@ import * as u8a from 'uint8arrays'
 
 test('expect ECPointDecompress to throw an error for undefined', () => {
       expect(() => {
-      mapper.ECPointDecompress();
+      const num: any = undefined;
+      mapper.ECPointDecompress(num);
       }).toThrowError('input must be a Uint8Array');
 });
 
@@ -15,7 +16,8 @@ test('expect ECPointDecompress to throw an error for null', () => {
 
 test('expect ECPointDecompress to throw an error for unexpected input', () => {
       expect(() => {
-      mapper.ECPointDecompress(5);
+      const num: any = 5;
+      mapper.ECPointDecompress(num);
       }).toThrowError('input must be a Uint8Array');
 });
 

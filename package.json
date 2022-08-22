@@ -28,10 +28,6 @@
     "url": "https://github.com/bshambaugh/nist-weierstrauss.git"
   },
   "sideEffects": false,
-  "scripts": {
-    "test": "npx lerna exec npm t",
-    "build": "npx lerna run build"
-  },
   "dependencies": {
     "@babel/plugin-proposal-decorators": "^7.18.10",
     "bigint-mod-arith": "^3.1.0",
