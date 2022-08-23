@@ -1,6 +1,6 @@
 {
   "name": "nist-weierstrauss",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Utilities for NIST Weierstrauss ECC curves for the Ceramic did:key method resolver",
   "keywords": [
     "ceramic",
@@ -27,6 +27,10 @@
     "type": "git",
     "url": "https://github.com/bshambaugh/nist-weierstrauss.git"
   },
+  "scripts": {
+    "test":"jest",
+    "build":"tsc"
+  },
   "sideEffects": false,
   "dependencies": {
     "@babel/plugin-proposal-decorators": "^7.18.10",
@@ -39,8 +43,5 @@
   },
   "devDependencies": {
     "@types/jest": "^28.1.7"
-  },
-  "workspaces": [
-    "packages/*"
-  ]
+  }
 }

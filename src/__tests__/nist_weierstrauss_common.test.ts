@@ -227,9 +227,9 @@ test('expect publicKeyIntToXY to have properties x and y', () => {
       }).toThrowError('Input must have properties x and y');
 });
 
-test('expect publicKeyIntToXY to throw an error for {x: undefined, y: undefined}', () => {
+test('expect publicKeyIntToXY to throw an error for undefined', () => {
       expect(() => {
-      const object: any = {x: undefined, y: undefined};
+      const object: any = undefined;
       mapper.publicKeyIntToXY(object);
       }).toThrowError('input cannot be null or undefined.');
 });
