@@ -1,6 +1,6 @@
 {
   "name": "nist-weierstrauss",
-  "version": "0.0.5",
+  "version": "1.0.0",
   "description": "Utilities for NIST Weierstrauss ECC curves for the Ceramic did:key method resolver",
   "keywords": [
     "ceramic",
