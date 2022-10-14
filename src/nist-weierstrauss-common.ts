@@ -83,7 +83,7 @@ export function publicKeyHexToUint8ArrayPointPair(publicKeyHex: string) : octetP
  */
 export function testHexString(str : string) : boolean {
  const regex = new RegExp(/^[A-Fa-f0-9]+/i);
- if(regex.test(str)) {
+ if((regex.test(str)) && str != null) {
      if(str.length == regex.exec(str)[0].length) {
          return true;
      }
