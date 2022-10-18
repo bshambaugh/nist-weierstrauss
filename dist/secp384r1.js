@@ -1,7 +1,10 @@
-import * as u8a from "uint8arrays";
-import * as bigintModArith from "bigint-mod-arith";
-import * as nist_weierstrauss_common from "./nist-weierstrauss-common.js";
-export function ECPointDecompress(comp) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ECPointDecompress = void 0;
+const u8a = require("uint8arrays");
+const bigintModArith = require("bigint-mod-arith");
+const nist_weierstrauss_common = require("./nist-weierstrauss-common.js");
+function ECPointDecompress(comp) {
     if (!nist_weierstrauss_common.testUint8Array(comp)) {
         throw new TypeError("input must be a Uint8Array");
     }
@@ -22,4 +25,5 @@ export function ECPointDecompress(comp) {
         y: yBig,
     };
 }
+exports.ECPointDecompress = ECPointDecompress;
 //# sourceMappingURL=secp384r1.js.map
