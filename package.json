@@ -3,27 +3,27 @@
   "version": "1.2.0",
   "description": "Utilities for NIST Weierstrauss ECC curves for the Ceramic did:key method resolver",
   "author": "Brent Shambaugh brent.shambaugh@gmail.com",
+  "license": "(Apache-2.0 OR MIT)", 
   "keywords": [
     "ceramic",
     "nist",
     "weierstrauss"
   ],
-  "type": "module",
-  "exports": {
-      ".": "./lib/index.js"
-  },
   "source" : "src/index.ts",
-  "main": "./lib/index.js",
   "typings": "./lib/index.d.ts",
-  "sideEffects": false,
-  "files": [
+  "main": "./lib/index.js",
+    "files": [
     "lib/*",
     "src/*"
   ],
-  "engines": {
-     "node": ">=14.14"
+    "engines": {
+     "node": ">=12"
   },
-    "scripts": {
+  "exports": {
+      ".": "./lib/index.js"
+  },
+  "sideEffects": false,
+  "scripts": {
     "test": "jest --silent",
     "build": "tsc -p tsconfig.json",
     "start": "tsdx watch",
