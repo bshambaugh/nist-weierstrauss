@@ -8,6 +8,7 @@
     "nist",
     "weierstrauss"
   ],
+  "type": "module",
   "exports": {
       ".": "./lib/index.js"
   },
