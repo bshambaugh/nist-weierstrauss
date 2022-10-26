@@ -6,7 +6,7 @@ import {
   BigIntPoint,
   base64urlPoint,
   octetPoint,
-} from "./nist-weierstrauss-common";
+} from "./nist-weierstrauss-common.js";
 
 export {
   secp256r1,

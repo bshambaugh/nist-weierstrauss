@@ -1,4 +1,4 @@
-import * as mapper from "../secp521r1";
+import * as mapper from "../secp521r1.js";
 import * as u8a from "uint8arrays";
 
 test("expect ECPointDecompress to throw an error for undefined", () => {

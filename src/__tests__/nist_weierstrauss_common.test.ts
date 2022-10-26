@@ -1,4 +1,4 @@
-import * as mapper from "../nist-weierstrauss-common";
+import * as mapper from "../nist-weierstrauss-common.js";
 import * as u8a from "uint8arrays";
 
 test("test a hex string with unexpected input", () => {
