@@ -18,9 +18,6 @@
   "engines": {
     "node": ">=12"
   },
-  "exports": {
-    ".": "./lib/index.js"
-  },
   "sideEffects": false,
   "scripts": {
     "test": "jest --silent",
