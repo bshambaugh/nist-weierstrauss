@@ -1,6 +1,6 @@
 {
   "name": "nist-weierstrauss",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "Utilities for NIST Weierstrauss ECC curves for the Ceramic did:key method resolver",
   "author": "Brent Shambaugh brent.shambaugh@gmail.com",
   "license": "(Apache-2.0 OR MIT)",
