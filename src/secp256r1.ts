@@ -1,7 +1,7 @@
 import * as u8a from "uint8arrays";
 import * as bigintModArith from "bigint-mod-arith";
 import * as nist_weierstrauss_common from "./nist-weierstrauss-common.js";
-import { BigIntPoint } from "./nist-weierstrauss-common";
+import type { BigIntPoint } from "./nist-weierstrauss-common";
 
 /**
  * Decompress a compressed public key in SEC format.
