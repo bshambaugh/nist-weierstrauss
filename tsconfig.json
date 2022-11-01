@@ -8,6 +8,7 @@
     "declarationMap": true,
     "skipLibCheck": true,
     "resolveJsonModule": true,
+    "moduleResolution": "node",
     "removeComments": true,
     "esModuleInterop": true,
     "emitDecoratorMetadata": true,
