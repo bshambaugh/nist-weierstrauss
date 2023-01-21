@@ -16,9 +16,6 @@
     "lib/"
   ],
   "type":"module",
-  "engines": {
-    "node": ">=14.06"
-  },
   "sideEffects": false,
   "scripts": {
     "test": "jest --silent",
